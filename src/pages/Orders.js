@@ -47,7 +47,6 @@ const Orders = () => {
     })
       .then((response) => {
         console.log(response.data.data);
-        setUsere(response.data.data);
       })
       .catch((erro) => {
         console.log("error", erro);
@@ -60,8 +59,7 @@ const Orders = () => {
       data: alluser,
     })
       .then((response) => {
-        console.log(response.data.data);
-        setUsere(response.data.data);
+        console.log(response);
       })
       .catch((erro) => {
         console.log("error", erro);
@@ -138,7 +136,7 @@ const Orders = () => {
                               <div className="peddina">
                                 <div className="card">
                                   <div className="animashn">
-                                    <h3 className="card_tital">{item.Sname}</h3>
+                                    <h3 className="card_tital">{item.current}</h3>
                                   </div>
                                   <img
                                     src={item.imgsrc}
@@ -149,11 +147,6 @@ const Orders = () => {
                                     <span className="card_categry">
                                       {item.tital}
                                     </span>
-                                    <a
-                                      href={item.link}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    ></a>
                                   </div>
                                 </div>
                               </div>
